@@ -7,26 +7,36 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<table>
+
+<!-- Navigation bar-->
+<div th:insert="base :: navbar"></div>
+
+<div class="jumbotron">
+    <h1 class="display-4">Here are the current Classes of interest</h1>
+    <!--    <p class="lead">How long did it take us? There were 20 something pairs in total.</p>-->
+    <!--    <hr class="my-4">-->
+    <!--    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+</div>
+<table border="1">
     <thead>
-    <tr>
-        <th>Course Title</th>
-        <th>Avail</th>
-        <th>Dept ID</th>
-        <th>Course ID</th>
-        <th>Description</th>
-        <th>Instructor Name</th>
+    <tr >
+        <th colspan="2">Course Title</th>
+        <th style="text-align:center" colspan="1" >Avail</th>
+        <th colspan="1">Dept ID</th>
+        <th colspan="1">Course ID</th>
+        <th colspan="3">Description</th>
+        <th colspan="1">Instructor Name</th>
         <th>Credits</th>
     </tr>
-    </thead>
+    <thead>
     <!--another row-->
     <tbody>
     <tr>
-        <td>AWS Level III</td>
-        <td>Y</td>
+        <td colspan="2">AWS Level III</td>
+        <td style="text-align:center">Y</td>
         <td>2485</td>
         <td>ITI364</td>
-        <td>Gain hands on experience with Amazon Web Services (AWS) products
+        <td colspan="3">Gain hands on experience with Amazon Web Services (AWS) products
             and services in this third in a series of 3 AWS "Certified Solutions
             Architect-Associate" certification.  This course progresses students
             who are already familiar with AWS by giving them hands on experience
@@ -42,11 +52,11 @@
     </tr>
     <!--another row-->
     <tr>
-        <td>Data Analytics Bootcamp</td>
-        <td>Y</td>
+        <td colspan="2">Data Analytics Bootcamp</td>
+        <td style="text-align:center">Y</td>
         <td>2485</td>
         <td>ITI340</td>
-        <td>This Data Analysis Bootcamp takes the student from data novice to data
+        <th colspan="3">This Data Analysis Bootcamp takes the student from data novice to data
             expert in this 60 hour project-based course.  You will learn and apply
             basic data analysis tools including data mining and visualization.
             Learn Python including its advanced data analysis tools. This bootcamp
@@ -61,29 +71,29 @@
         <td>Jennifer Lee</td>
         <td>3</td>
     </tr>
-        <td>Tableau Level III: Advanced Techniques</td>
-        <td>Y</td>
-        <td>2504</td>
-        <td>ITI347</td>
-        <td>A good business dashboard informs with a glance and provides great visualization
-            of salient metrics. An infomative dashboard is a critical tool for corporate
-            decision making.  The expert Visual Analyst often needs to use other tools.
-            They might need to incorporate R into their Tableau analysis, or use advanced
-            Level of Detail Dxperessions (LOD). Sometimes, the analyst wants to provide
-            their user with a Story.  In this class, we prepare the student to take up a
-            job assignment requiring advanced Tableau skills.  The course has been
-            specifically designed to give your Tableau career a strong boost.  This trainig
-            focuses on skills, such s LOD expressions, using R and creating
-            Stories to convey findings.
-        </td>
-        <td>Jennifer Lee</td>
-        <td>3</td>
+    <td colspan="2">Tableau Level III: Advanced Techniques</td>
+    <td style="text-align:center">Y</td>
+    <td>2504</td>
+    <td>ITI347</td>
+    <th colspan="3">A good business dashboard informs with a glance and provides great visualization
+        of salient metrics. An infomative dashboard is a critical tool for corporate
+        decision making.  The expert Visual Analyst often needs to use other tools.
+        They might need to incorporate R into their Tableau analysis, or use advanced
+        Level of Detail Dxperessions (LOD). Sometimes, the analyst wants to provide
+        their user with a Story.  In this class, we prepare the student to take up a
+        job assignment requiring advanced Tableau skills.  The course has been
+        specifically designed to give your Tableau career a strong boost.  This trainig
+        focuses on skills, such s LOD expressions, using R and creating
+        Stories to convey findings.
+    </td>
+    <td>Jennifer Lee</td>
+    <td>3</td>
     <tr>
-        <td>Tableau Level III: Advanced Techniques</td>
-        <td>Y</td>
+        <td colspan="2">Tableau Level III: Advanced Techniques</td>
+        <td style="text-align:center">Y</td>
         <td>2504</td>
         <td>ITI347</td>
-        <td>A good business dashboard informs with a glance and provides great visualization
+        <th colspan="3">A good business dashboard informs with a glance and provides great visualization
             of salient metrics. An infomative dashboard is a critical tool for corporate
             decision making.  The expert Visual Analyst often needs to use other tools.
             They might need to incorporate R into their Tableau analysis, or use advanced
@@ -98,11 +108,11 @@
         <td>3</td>
     </tr>
     <tr>
-        <td>MS SharePoint for Site Administrators</td>
-        <td>Y</td>
+        <td colspan="2">MS SharePoint for Site Administrators</td>
+        <td style="text-align:center">Y</td>
         <td>2506</td>
         <td>ITI405</td>
-        <td>This course is designed for SharePoint site administrators and
+        <th colspan="3">This course is designed for SharePoint site administrators and
             power users tasked with supporting their organization's Office 365 and/or SharePoint
             Online tenancy.  Starting with building a site collection and adding
             libraries and lists, to the more advanced steps of setting up and
@@ -113,11 +123,11 @@
         <td>3</td>
     </tr>
     <tr>
-        <td>Hosting Full-Stack Applications with AWS</td>
-        <td>Y</td>
+        <td colspan="2">Hosting Full-Stack Applications with AWS</td>
+        <td style="text-align:center">Y</td>
         <td>2485</td>
         <td>ITI376</td>
-        <td>Get hands on experience hosting static and full-stack web sites
+        <th colspan="3">Get hands on experience hosting static and full-stack web sites
             on Amazon Web Services.  Learn how to upload your site to S3,
             configure your database with RDS, register your domain name in
             Route 53 , purchase an SSL certificate and configure a load balancer
@@ -130,7 +140,16 @@
     </tr>
     </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
 
-</table>
+</script>
 </body>
 </html>
